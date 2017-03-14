@@ -16,7 +16,7 @@
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
-    <RegisteredManifestChecksum>78F7A63A549FB19F178193A7D9B433592DAB0057D3B5EE586CACE0BCAFBFC0B8</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>2EA6D6C8BB1B36B0381A10614B839291E642CD41DBC98F7DBA65379279AA06E6</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>FoodComputerC-uwp_1.0.0.0_arm__brq8r4pxv8pcc</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>FoodComputerC-uwp_brq8r4pxv8pcc!App</RegisteredUserModeAppID>
     <RegisteredPackageID>FoodComputerC-uwp</RegisteredPackageID>
@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputerC\bin\ARM\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-03-13T03:30:24.412</Modified>
+      <Modified>2017-03-14T16:10:15.741</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputerC\bin\ARM\Debug\FoodComputerC.winmd">
       <PackagePath>FoodComputerC.winmd</PackagePath>
-      <Modified>2017-03-13T03:30:20.680</Modified>
+      <Modified>2017-03-14T16:10:11.930</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Duncan\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>

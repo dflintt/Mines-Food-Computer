@@ -44,7 +44,7 @@ namespace FoodComputerC
         {
             _deferral = taskInstance.GetDeferral();
 
-            SetupRemoteArduino();
+            InitGPIO();
 
             timer = ThreadPoolTimer.CreatePeriodicTimer(Timer_Tick,
                        TimeSpan.FromMilliseconds(1000));
@@ -55,47 +55,53 @@ namespace FoodComputerC
             switch (state)
             {
                 case "actuate":
-                    /*
+                    
                     actuatePin.Write(GpioPinValue.High);
                     pollPin.Write(GpioPinValue.Low);
                     setPin.Write(GpioPinValue.Low);
-                    */
+                    
+                    /*
                     arduino.digitalWrite(ACTUATE_PIN, PinState.HIGH);
                     arduino.digitalWrite(POLL_PIN, PinState.LOW);
                     arduino.digitalWrite(SET_PIN, PinState.LOW);
+                    */
                     state = "poll";
 
                     break;
 
                 case "poll":
-                    /*
+                    
                     actuatePin.Write(GpioPinValue.Low);
                     pollPin.Write(GpioPinValue.High);
                     setPin.Write(GpioPinValue.Low);
-                    */
+                    
+                    /*
                     arduino.digitalWrite(ACTUATE_PIN, PinState.LOW);
                     arduino.digitalWrite(POLL_PIN, PinState.HIGH);
                     arduino.digitalWrite(SET_PIN, PinState.LOW);
+                    */
                     state = "set";
 
                     break;
 
                 case "set":
-                    /*
+                    
                     actuatePin.Write(GpioPinValue.Low);
                     pollPin.Write(GpioPinValue.Low);
                     setPin.Write(GpioPinValue.High);
-                    */
+                    
+                    /*
                     arduino.digitalWrite(ACTUATE_PIN, PinState.LOW);
                     arduino.digitalWrite(POLL_PIN, PinState.LOW);
                     arduino.digitalWrite(SET_PIN, PinState.HIGH);
+                    */
                     state = "actuate";
 
                     break;
             }
         }
 
-        /* This is used for the raspberry pi pin I/O
+        // This is used for the raspberry pi pin I/O
         private void InitGPIO()
         {
             GpioController gpio = GpioController.GetDefault();
@@ -114,24 +120,25 @@ namespace FoodComputerC
             pollPin.SetDriveMode(GpioPinDriveMode.Output);
             setPin.SetDriveMode(GpioPinDriveMode.Output);
         }
-        */
+
 
         public void SetupRemoteArduino()
         {
-            connection = new UsbSerial("MyBTDevice");
-            arduino = new RemoteDevice(connection);
+            //connection = new UsbSerial("MyBTDevice");
+            //arduino = new RemoteDevice(connection);
+            //arduino = App.Arduino;
 
-            arduino.DeviceReady += Setup;
+            //arduino.DeviceReady += Setup;
 
-            connection.begin(9600, SerialConfig.SERIAL_8N1);
+            //connection.begin(9600, SerialConfig.SERIAL_8N1);
         }
 
         public void Setup()
         {
             //set all 3 pins to output
-            arduino.pinMode(ACTUATE_PIN, PinMode.OUTPUT);
-            arduino.pinMode(POLL_PIN, PinMode.OUTPUT);
-            arduino.pinMode(SET_PIN, PinMode.OUTPUT);
+            //arduino.pinMode(ACTUATE_PIN, PinMode.OUTPUT);
+            //arduino.pinMode(POLL_PIN, PinMode.OUTPUT);
+            //arduino.pinMode(SET_PIN, PinMode.OUTPUT);
         }
     }
 }

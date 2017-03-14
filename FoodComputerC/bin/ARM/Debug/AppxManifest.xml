@@ -48,12 +48,12 @@
     <Extension Category="windows.activatableClass.inProcessServer">
       <InProcessServer>
         <Path>Microsoft.Maker.Firmata.dll</Path>
+        <ActivatableClass ActivatableClassId="Microsoft.Maker.Firmata.StringCallbackEventArgs" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Maker.Firmata.SysexCallbackEventArgs" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.Maker.Firmata.CallbackEventArgs" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.Maker.Firmata.I2cCallbackEventArgs" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Microsoft.Maker.Firmata.StringCallbackEventArgs" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Microsoft.Maker.Firmata.SystemResetCallbackEventArgs" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Microsoft.Maker.Firmata.SysexCallbackEventArgs" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.Maker.Firmata.UwpFirmata" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Maker.Firmata.SystemResetCallbackEventArgs" ThreadingModel="both" />
       </InProcessServer>
     </Extension>
     <Extension Category="windows.activatableClass.inProcessServer">
@@ -67,11 +67,11 @@
       <InProcessServer>
         <Path>Microsoft.Maker.Serial.dll</Path>
         <ActivatableClass ActivatableClassId="Microsoft.Maker.Serial.CurieBleSerial" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Microsoft.Maker.Serial.BleSerial" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Microsoft.Maker.Serial.BluetoothSerial" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Microsoft.Maker.Serial.DfRobotBleSerial" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Microsoft.Maker.Serial.NetworkSerial" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.Maker.Serial.UsbSerial" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Maker.Serial.DfRobotBleSerial" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Maker.Serial.BluetoothSerial" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Maker.Serial.BleSerial" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Maker.Serial.NetworkSerial" ThreadingModel="both" />
       </InProcessServer>
     </Extension>
   </Extensions>
