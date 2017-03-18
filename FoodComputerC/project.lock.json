@@ -3,6 +3,15 @@
   "version": 2,
   "targets": {
     "UAP,Version=v10.0": {
+      "AdafruitClassLibrary/1.0.7": {
+        "type": "package",
+        "compile": {
+          "lib/netcore50/AdafruitClassLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/AdafruitClassLibrary.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -1938,6 +1947,15 @@
       }
     },
     "UAP,Version=v10.0/win10-arm": {
+      "AdafruitClassLibrary/1.0.7": {
+        "type": "package",
+        "compile": {
+          "lib/netcore50/AdafruitClassLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/AdafruitClassLibrary.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -3697,6 +3715,15 @@
       }
     },
     "UAP,Version=v10.0/win10-arm-aot": {
+      "AdafruitClassLibrary/1.0.7": {
+        "type": "package",
+        "compile": {
+          "lib/netcore50/AdafruitClassLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/AdafruitClassLibrary.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -5419,6 +5446,15 @@
       }
     },
     "UAP,Version=v10.0/win10-x64": {
+      "AdafruitClassLibrary/1.0.7": {
+        "type": "package",
+        "compile": {
+          "lib/netcore50/AdafruitClassLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/AdafruitClassLibrary.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -7185,6 +7221,15 @@
       }
     },
     "UAP,Version=v10.0/win10-x64-aot": {
+      "AdafruitClassLibrary/1.0.7": {
+        "type": "package",
+        "compile": {
+          "lib/netcore50/AdafruitClassLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/AdafruitClassLibrary.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -8907,6 +8952,15 @@
       }
     },
     "UAP,Version=v10.0/win10-x86": {
+      "AdafruitClassLibrary/1.0.7": {
+        "type": "package",
+        "compile": {
+          "lib/netcore50/AdafruitClassLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/AdafruitClassLibrary.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -10673,6 +10727,15 @@
       }
     },
     "UAP,Version=v10.0/win10-x86-aot": {
+      "AdafruitClassLibrary/1.0.7": {
+        "type": "package",
+        "compile": {
+          "lib/netcore50/AdafruitClassLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/AdafruitClassLibrary.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -12396,6 +12459,16 @@
     }
   },
   "libraries": {
+    "AdafruitClassLibrary/1.0.7": {
+      "sha512": "K7fypVEXBwFiuvX53n12qEjE0HSloGgg1AHWoVFhJNslIopPIxWu51s5QB8skRoHmWoSlQi3o3qeB6LEea+9EQ==",
+      "type": "package",
+      "path": "AdafruitClassLibrary/1.0.7",
+      "files": [
+        "AdafruitClassLibrary.1.0.7.nupkg.sha512",
+        "AdafruitClassLibrary.nuspec",
+        "lib/netcore50/AdafruitClassLibrary.dll"
+      ]
+    },
     "Microsoft.CSharp/4.0.0": {
       "sha512": "oWqeKUxHXdK6dL2CFjgMcaBISbkk+AqEg+yvJHE4DElNzS4QaTsCflgkkqZwVlWby1Dg9zo9n+iCAMFefFdJ/A==",
       "type": "package",
@@ -15662,6 +15735,7 @@
   },
   "projectFileDependencyGroups": {
     "": [
+      "AdafruitClassLibrary >= 1.0.7",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.0.0",
       "Windows-Remote-Arduino >= 1.4.0"
     ],

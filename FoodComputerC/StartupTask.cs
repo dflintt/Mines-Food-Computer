@@ -16,6 +16,15 @@ using Microsoft.Maker.Serial;
 // Poll Pin 31
 // Set Pin 26
 
+// Sensors we must figure out/fix
+//
+// Temperature Sensor
+// Water Level Sensor
+// I2C PWM Controllers
+// pH Sensor
+// EC Sensor
+// Fridge Controls? Who the fuck knows
+
 namespace FoodComputerC
 {
     public sealed class StartupTask : IBackgroundTask
@@ -56,45 +65,49 @@ namespace FoodComputerC
             {
                 case "actuate":
                     
+                    /*
                     actuatePin.Write(GpioPinValue.High);
                     pollPin.Write(GpioPinValue.Low);
                     setPin.Write(GpioPinValue.Low);
+                    */
                     
-                    /*
+                    
                     arduino.digitalWrite(ACTUATE_PIN, PinState.HIGH);
                     arduino.digitalWrite(POLL_PIN, PinState.LOW);
                     arduino.digitalWrite(SET_PIN, PinState.LOW);
-                    */
+                    
                     state = "poll";
 
                     break;
 
                 case "poll":
                     
+                    /*
                     actuatePin.Write(GpioPinValue.Low);
                     pollPin.Write(GpioPinValue.High);
                     setPin.Write(GpioPinValue.Low);
+                    */
                     
-                    /*
                     arduino.digitalWrite(ACTUATE_PIN, PinState.LOW);
                     arduino.digitalWrite(POLL_PIN, PinState.HIGH);
                     arduino.digitalWrite(SET_PIN, PinState.LOW);
-                    */
+                    
                     state = "set";
 
                     break;
 
                 case "set":
                     
+                    /*
                     actuatePin.Write(GpioPinValue.Low);
                     pollPin.Write(GpioPinValue.Low);
                     setPin.Write(GpioPinValue.High);
+                    */
                     
-                    /*
                     arduino.digitalWrite(ACTUATE_PIN, PinState.LOW);
                     arduino.digitalWrite(POLL_PIN, PinState.LOW);
                     arduino.digitalWrite(SET_PIN, PinState.HIGH);
-                    */
+                    
                     state = "actuate";
 
                     break;
@@ -104,21 +117,27 @@ namespace FoodComputerC
         // This is used for the raspberry pi pin I/O
         private void InitGPIO()
         {
+            /*
             GpioController gpio = GpioController.GetDefault();
             actuatePin = gpio.OpenPin(ACTUATE_PIN);
             pollPin = gpio.OpenPin(POLL_PIN);
             setPin = gpio.OpenPin(SET_PIN);
+            */
 
-            connection = new BluetoothSerial("MyBTDevice");
+            
+
+            connection = new UsbSerial("VID_2341", "PID_0043");
             arduino = new RemoteDevice(connection);
+
+            Setup();
 
             arduino.DeviceReady += Setup;
 
-            connection.begin(115200, SerialConfig.SERIAL_8N1);
+            connection.begin(57600, SerialConfig.SERIAL_8N1);
 
-            actuatePin.SetDriveMode(GpioPinDriveMode.Output);
-            pollPin.SetDriveMode(GpioPinDriveMode.Output);
-            setPin.SetDriveMode(GpioPinDriveMode.Output);
+            //actuatePin.SetDriveMode(GpioPinDriveMode.Output);
+            //pollPin.SetDriveMode(GpioPinDriveMode.Output);
+            //setPin.SetDriveMode(GpioPinDriveMode.Output);
         }
 
 
@@ -136,9 +155,9 @@ namespace FoodComputerC
         public void Setup()
         {
             //set all 3 pins to output
-            //arduino.pinMode(ACTUATE_PIN, PinMode.OUTPUT);
-            //arduino.pinMode(POLL_PIN, PinMode.OUTPUT);
-            //arduino.pinMode(SET_PIN, PinMode.OUTPUT);
+            arduino.pinMode(ACTUATE_PIN, PinMode.OUTPUT);
+            arduino.pinMode(POLL_PIN, PinMode.OUTPUT);
+            arduino.pinMode(SET_PIN, PinMode.OUTPUT);
         }
     }
 }

@@ -185,3 +185,5 @@ C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputer
 C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputerC\bin\ARM\Debug\Microsoft.Maker.RemoteWiring.winmd
 C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputerC\bin\ARM\Debug\Microsoft.Maker.Serial.winmd
 C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputerC\obj\ARM\Debug\FoodComputerC.csprojResolveAssemblyReference.cache
+C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputerC\bin\ARM\Debug\AdafruitClassLibrary.dll
+C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputerC\obj\ARM\Debug\FoodComputerC.csproj.GenerateResource.Cache

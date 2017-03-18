@@ -25,6 +25,9 @@
     <AppxPackagedFile Include="C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputerC\bin\ARM\Debug\FoodComputerC.winmd">
       <PackagePath>FoodComputerC.winmd</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Duncan\.nuget\packages\AdafruitClassLibrary\1.0.7\lib\netcore50\AdafruitClassLibrary.dll">
+      <PackagePath>AdafruitClassLibrary.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Duncan\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
     </AppxPackagedFile>
