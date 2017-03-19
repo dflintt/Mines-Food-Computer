@@ -41,13 +41,17 @@ namespace FoodComputerC
         private GpioPin setPin;
         private GpioPinValue setPinValue;
 
+        private int myMoisture; // this is just for testing
+
         private GpioPinValue pinValue;
 
         private ThreadPoolTimer timer;
         private string state = "actuate";
 
         private IStream connection;
-        private RemoteDevice arduino; 
+        private RemoteDevice arduino;
+
+        private Module testModule;
 
         public void Run(IBackgroundTaskInstance taskInstance)
         {
@@ -81,13 +85,14 @@ namespace FoodComputerC
                     break;
 
                 case "poll":
-                    
+
                     /*
                     actuatePin.Write(GpioPinValue.Low);
                     pollPin.Write(GpioPinValue.High);
                     setPin.Write(GpioPinValue.Low);
                     */
-                    
+
+                    myMoisture = testModule.readMoisture();
                     arduino.digitalWrite(ACTUATE_PIN, PinState.LOW);
                     arduino.digitalWrite(POLL_PIN, PinState.HIGH);
                     arduino.digitalWrite(SET_PIN, PinState.LOW);
@@ -128,6 +133,8 @@ namespace FoodComputerC
 
             connection = new UsbSerial("VID_2341", "PID_0043");
             arduino = new RemoteDevice(connection);
+
+            testModule = new Module(arduino, 0, "0", 5);
 
             Setup();
 
