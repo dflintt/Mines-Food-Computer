@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.Maker.RemoteWiring;
 using Microsoft.Maker.Serial;
 
-namespace FoodComputerC
+namespace FoodComputerCHeaded
 {
     class Module
     {
