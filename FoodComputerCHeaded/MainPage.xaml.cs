@@ -41,6 +41,9 @@ namespace FoodComputerCHeaded
         private GpioPin setPin;
         private GpioPinValue setPinValue;
 
+        private SolidColorBrush redBrush = new SolidColorBrush(Windows.UI.Colors.Red);
+        private SolidColorBrush grayBrush = new SolidColorBrush(Windows.UI.Colors.Gray);
+
         private int myMoisture; // this is just for testing
 
         private GpioPinValue pinValue;
@@ -57,9 +60,13 @@ namespace FoodComputerCHeaded
         {
             this.InitializeComponent();
 
+            InitGPIO();
+
             timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromMilliseconds(500);
             timer.Tick += Timer_Tick;
+
+            timer.Start();
         }
 
         private void Timer_Tick(object sender, object e)
@@ -78,6 +85,10 @@ namespace FoodComputerCHeaded
                     arduino.digitalWrite(ACTUATE_PIN, PinState.HIGH);
                     arduino.digitalWrite(POLL_PIN, PinState.LOW);
                     arduino.digitalWrite(SET_PIN, PinState.LOW);
+
+                    ActuateIndicator.Fill = redBrush;
+                    PollIndicator.Fill = grayBrush;
+                    SetIndicator.Fill = grayBrush;
 
                     state = "poll";
 
@@ -98,6 +109,10 @@ namespace FoodComputerCHeaded
                     arduino.digitalWrite(POLL_PIN, PinState.HIGH);
                     arduino.digitalWrite(SET_PIN, PinState.LOW);
 
+                    ActuateIndicator.Fill = grayBrush;
+                    PollIndicator.Fill = redBrush;
+                    SetIndicator.Fill = grayBrush;
+
                     state = "set";
 
                     break;
@@ -114,6 +129,10 @@ namespace FoodComputerCHeaded
                     arduino.digitalWrite(POLL_PIN, PinState.LOW);
                     arduino.digitalWrite(SET_PIN, PinState.HIGH);
 
+                    ActuateIndicator.Fill = grayBrush;
+                    PollIndicator.Fill = grayBrush;
+                    SetIndicator.Fill = redBrush;
+
                     state = "actuate";
 
                     break;
@@ -121,7 +140,7 @@ namespace FoodComputerCHeaded
     }
 
 
-/* All this is from the og headed code, we'll need to import it at some point
+/* All this is from the og headed code, im currently working on importing it
             public void Run(IBackgroundTaskInstance taskInstance)
             {
                 _deferral = taskInstance.GetDeferral();
@@ -237,7 +256,12 @@ namespace FoodComputerCHeaded
                 arduino.pinMode(POLL_PIN, PinMode.OUTPUT);
                 arduino.pinMode(SET_PIN, PinMode.OUTPUT);
             }
+
+        private void textBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
         }
+    }
     }
     
 
