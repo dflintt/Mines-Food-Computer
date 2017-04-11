@@ -30,9 +30,9 @@ namespace FoodComputerCHeaded
     public sealed partial class MainPage : Page
     {
         private DispatcherTimer timer;
-        private const int ACTUATE_PIN = 5;
-        private const int POLL_PIN = 6;
-        private const int SET_PIN = 7;
+        private const int ACTUATE_PIN = 9;
+        private const int POLL_PIN = 10;
+        private const int SET_PIN = 11;
 
         private GpioPin actuatePin;
         private GpioPinValue actuatePinValue;
@@ -44,7 +44,7 @@ namespace FoodComputerCHeaded
         private SolidColorBrush redBrush = new SolidColorBrush(Windows.UI.Colors.Red);
         private SolidColorBrush grayBrush = new SolidColorBrush(Windows.UI.Colors.Gray);
 
-        private int myMoisture; // this is just for testing
+        private ushort myMoisture; // this is just for testing
 
         private GpioPinValue pinValue;
 
@@ -76,15 +76,10 @@ namespace FoodComputerCHeaded
                 case "actuate":
 
 
-                    //actuatePin.Write(GpioPinValue.High);
-                    //pollPin.Write(GpioPinValue.Low);
-                    //setPin.Write(GpioPinValue.Low);
 
-
-
-                    arduino.digitalWrite(ACTUATE_PIN, PinState.HIGH);
-                    arduino.digitalWrite(POLL_PIN, PinState.LOW);
-                    arduino.digitalWrite(SET_PIN, PinState.LOW);
+                    //arduino.digitalWrite(ACTUATE_PIN, PinState.HIGH);
+                    //arduino.digitalWrite(POLL_PIN, PinState.LOW);
+                    //arduino.digitalWrite(SET_PIN, PinState.LOW);
 
                     ActuateIndicator.Fill = redBrush;
                     PollIndicator.Fill = grayBrush;
@@ -96,18 +91,12 @@ namespace FoodComputerCHeaded
 
                 case "poll":
 
-
-                    //actuatePin.Write(GpioPinValue.Low);
-                    //pollPin.Write(GpioPinValue.High);
-                    //setPin.Write(GpioPinValue.Low);
-
-
                     myMoisture = testModule.readMoisture();
                     
 
-                    arduino.digitalWrite(ACTUATE_PIN, PinState.LOW);
-                    arduino.digitalWrite(POLL_PIN, PinState.HIGH);
-                    arduino.digitalWrite(SET_PIN, PinState.LOW);
+                    //arduino.digitalWrite(ACTUATE_PIN, PinState.LOW);
+                    //arduino.digitalWrite(POLL_PIN, PinState.HIGH);
+                    //arduino.digitalWrite(SET_PIN, PinState.LOW);
 
                     ActuateIndicator.Fill = grayBrush;
                     PollIndicator.Fill = redBrush;
@@ -119,15 +108,35 @@ namespace FoodComputerCHeaded
 
                 case "set":
 
+                    //testMoistureBox.Text = myMoisture.ToString();
+                    testMoistureBox.Text = arduino.analogRead("A4").ToString();
+                    //testMoistureBox.Text = 101.ToString();
 
-                    //actuatePin.Write(GpioPinValue.Low);
-                    //pollPin.Write(GpioPinValue.Low);
-                    //setPin.Write(GpioPinValue.High);
-                    testMoistureBox.Text = myMoisture.ToString();
+                    ushort temp = arduino.analogRead("A4");
 
-                    arduino.digitalWrite(ACTUATE_PIN, PinState.LOW);
-                    arduino.digitalWrite(POLL_PIN, PinState.LOW);
-                    arduino.digitalWrite(SET_PIN, PinState.HIGH);
+                    //arduino.digitalWrite(ACTUATE_PIN, PinState.LOW);
+                    //arduino.digitalWrite(POLL_PIN, PinState.LOW);
+                    //arduino.digitalWrite(SET_PIN, PinState.HIGH);
+
+                    arduino.analogWrite(SET_PIN, 700);
+                    arduino.analogWrite(POLL_PIN, 700);
+
+                    
+                    if (temp == 0)
+                    {
+                        arduino.analogWrite(ACTUATE_PIN, 0);
+                    }
+
+                    else if (temp == 1023)
+                    {
+                        arduino.analogWrite(ACTUATE_PIN, 255);
+                    }
+
+                    else
+                    {
+                        arduino.analogWrite(ACTUATE_PIN, (ushort) (temp / 4));
+                    }
+                    
 
                     ActuateIndicator.Fill = grayBrush;
                     PollIndicator.Fill = grayBrush;
@@ -139,94 +148,25 @@ namespace FoodComputerCHeaded
             }
     }
 
-
-/* All this is from the og headed code, im currently working on importing it
-            public void Run(IBackgroundTaskInstance taskInstance)
-            {
-                _deferral = taskInstance.GetDeferral();
-
-                InitGPIO();
-
-                timer = ThreadPoolTimer.CreatePeriodicTimer(Timer_Tick,
-                           TimeSpan.FromMilliseconds(1000));
-            }
-
-            public void Timer_Tick(ThreadPoolTimer timer)
-            {
-                switch (state)
-                {
-                    case "actuate":
-
-                        
-                        //actuatePin.Write(GpioPinValue.High);
-                        //pollPin.Write(GpioPinValue.Low);
-                        //setPin.Write(GpioPinValue.Low);
-                        
-
-
-                        arduino.digitalWrite(ACTUATE_PIN, PinState.HIGH);
-                        arduino.digitalWrite(POLL_PIN, PinState.LOW);
-                        arduino.digitalWrite(SET_PIN, PinState.LOW);
-
-                        state = "poll";
-
-                        break;
-
-                    case "poll":
-
-                        
-                        //actuatePin.Write(GpioPinValue.Low);
-                        //pollPin.Write(GpioPinValue.High);
-                        //setPin.Write(GpioPinValue.Low);
-                        
-
-                        myMoisture = testModule.readMoisture();
-                        arduino.digitalWrite(ACTUATE_PIN, PinState.LOW);
-                        arduino.digitalWrite(POLL_PIN, PinState.HIGH);
-                        arduino.digitalWrite(SET_PIN, PinState.LOW);
-
-                        state = "set";
-
-                        break;
-
-                    case "set":
-
-                        
-                        //actuatePin.Write(GpioPinValue.Low);
-                        //pollPin.Write(GpioPinValue.Low);
-                        //setPin.Write(GpioPinValue.High);
-                        
-
-                        arduino.digitalWrite(ACTUATE_PIN, PinState.LOW);
-                        arduino.digitalWrite(POLL_PIN, PinState.LOW);
-                        arduino.digitalWrite(SET_PIN, PinState.HIGH);
-
-                        state = "actuate";
-
-                        break;
-                }
-            }
-
-*/
-
             // This is used for the raspberry pi pin I/O
             private void InitGPIO()
             {
-                /*
-                GpioController gpio = GpioController.GetDefault();
-                actuatePin = gpio.OpenPin(ACTUATE_PIN);
-                pollPin = gpio.OpenPin(POLL_PIN);
-                setPin = gpio.OpenPin(SET_PIN);
-                */
+            /*
+            GpioController gpio = GpioController.GetDefault();
+            actuatePin = gpio.OpenPin(ACTUATE_PIN);
+            pollPin = gpio.OpenPin(POLL_PIN);
+            setPin = gpio.OpenPin(SET_PIN);
+            */
 
 
 
-                connection = new UsbSerial("VID_2341", "PID_0043");
-                arduino = new RemoteDevice(connection);
+            //connection = new UsbSerial("VID_2341", "PID_0043"); For initial arduino
+            connection = new UsbSerial("VID_2A03", "PID_0043");
+            arduino = new RemoteDevice(connection);
 
                 testModule = new Module(arduino, 0, "0", 5);
 
-                Setup();
+                //Setup();
 
                 arduino.DeviceReady += Setup;
 
@@ -255,6 +195,9 @@ namespace FoodComputerCHeaded
                 arduino.pinMode(ACTUATE_PIN, PinMode.OUTPUT);
                 arduino.pinMode(POLL_PIN, PinMode.OUTPUT);
                 arduino.pinMode(SET_PIN, PinMode.OUTPUT);
+
+                arduino.pinMode("A4", PinMode.ANALOG);
+                //arduino.pinMode(SET_PIN, PinMode.ONEWIRE);
             }
 
         private void textBlock_SelectionChanged(object sender, RoutedEventArgs e)

@@ -16,7 +16,7 @@
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
-    <RegisteredManifestChecksum>71E4CC2FC898822FD57AFC32E31292843CB4D9FFE9566B31E32AB708DB55AFA0</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>0F7683E736398F877DAC8BE1A2CA1AA2627BFCAAE3121A2778A9926568CE250A</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>ee1a8a2e-8033-4b37-b716-dbb1b1b1e50a_1.0.0.0_arm__brq8r4pxv8pcc</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>ee1a8a2e-8033-4b37-b716-dbb1b1b1e50a_brq8r4pxv8pcc!App</RegisteredUserModeAppID>
     <RegisteredPackageID>ee1a8a2e-8033-4b37-b716-dbb1b1b1e50a</RegisteredPackageID>
@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputerCHeaded\bin\ARM\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-03-21T15:16:53.735</Modified>
+      <Modified>2017-04-11T01:52:40.221</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputerCHeaded\bin\ARM\Debug\FoodComputerCHeaded.exe">
       <PackagePath>entrypoint\FoodComputerCHeaded.exe</PackagePath>
-      <Modified>2017-03-21T15:16:52.034</Modified>
+      <Modified>2017-04-11T01:52:39.975</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Duncan\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -512,7 +512,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputerCHeaded\bin\ARM\Debug\FoodComputerCHeaded.xr.xml">
       <PackagePath>FoodComputerCHeaded.xr.xml</PackagePath>
-      <Modified>2017-03-21T14:36:16.218</Modified>
+      <Modified>2017-04-11T01:15:02.367</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -521,11 +521,11 @@
     <AppxPackagedFile Include="C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputerCHeaded\bin\ARM\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-03-21T15:16:53.311</Modified>
+      <Modified>2017-04-11T01:15:04.519</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputerCHeaded\bin\ARM\Debug\Core\FoodComputerCHeaded.exe">
       <PackagePath>FoodComputerCHeaded.exe</PackagePath>
-      <Modified>2017-03-21T15:16:53.729</Modified>
+      <Modified>2017-04-11T01:52:40.217</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

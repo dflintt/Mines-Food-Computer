@@ -15,6 +15,7 @@
         <TextBlock x:ConnectionId='5' x:Name="Actuate" HorizontalAlignment="Left" Margin="237,148,0,0" TextWrapping="Wrap" Text="Actuate" VerticalAlignment="Top"                                              />
         <TextBlock x:ConnectionId='6' x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="493,148,0,0" TextWrapping="Wrap" Text="Poll" VerticalAlignment="Top"/>
         <TextBlock x:ConnectionId='7' x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="728,148,0,0" TextWrapping="Wrap" Text="Set" VerticalAlignment="Top"/>
+        <Button x:ConnectionId='8' x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="319,400,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>

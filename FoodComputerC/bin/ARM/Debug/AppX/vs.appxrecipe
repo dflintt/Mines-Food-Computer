@@ -16,7 +16,7 @@
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
-    <RegisteredManifestChecksum>6128FA255652FCA7DC9D7B9BE042E1AA412DACD08731E7A2F97C3F489D410FAB</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>7EF9D328129A7DC4610F9FFDE0CDA8289A5F784388DB0D9DB8B4D552381E018B</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>FoodComputerC-uwp_1.0.0.0_arm__brq8r4pxv8pcc</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>FoodComputerC-uwp_brq8r4pxv8pcc!App</RegisteredUserModeAppID>
     <RegisteredPackageID>FoodComputerC-uwp</RegisteredPackageID>
@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputerC\bin\ARM\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-03-18T19:46:12.730</Modified>
+      <Modified>2017-04-08T19:09:19.858</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputerC\bin\ARM\Debug\FoodComputerC.winmd">
       <PackagePath>FoodComputerC.winmd</PackagePath>
-      <Modified>2017-03-18T19:46:09.135</Modified>
+      <Modified>2017-04-08T19:09:13.425</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Duncan\.nuget\packages\AdafruitClassLibrary\1.0.7\lib\netcore50\AdafruitClassLibrary.dll">
       <PackagePath>AdafruitClassLibrary.dll</PackagePath>
@@ -521,7 +521,7 @@
     <AppxPackagedFile Include="C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputerC\bin\ARM\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-03-18T19:38:48.270</Modified>
+      <Modified>2017-04-08T19:09:15.485</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputerC\bin\ARM\Debug\Core\UWPShim.exe">
       <PackagePath>UWPShim.exe</PackagePath>

@@ -33,9 +33,10 @@ namespace FoodComputerCHeaded
             return 0.0;
         }
 
-        public int readMoisture()
+        public ushort readMoisture()
         {
             return arduino.analogRead(moisturePin);
+            //Debug.writeLine()
         }
     }
 }

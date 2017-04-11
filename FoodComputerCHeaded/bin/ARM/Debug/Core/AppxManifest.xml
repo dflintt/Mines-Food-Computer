@@ -32,6 +32,11 @@
   </Applications>
   <Capabilities>
     <Capability Name="internetClient" />
+    <DeviceCapability Name="serialcommunication">
+      <Device Id="any">
+        <Function Type="name:serialPort" />
+      </Device>
+    </DeviceCapability>
   </Capabilities>
   <Extensions>
     <Extension Category="windows.activatableClass.inProcessServer">
@@ -55,12 +60,12 @@
     <Extension Category="windows.activatableClass.inProcessServer">
       <InProcessServer>
         <Path>Microsoft.Maker.Serial.dll</Path>
-        <ActivatableClass ActivatableClassId="Microsoft.Maker.Serial.CurieBleSerial" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Microsoft.Maker.Serial.NetworkSerial" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.Maker.Serial.UsbSerial" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.Maker.Serial.BleSerial" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Microsoft.Maker.Serial.BluetoothSerial" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.Maker.Serial.DfRobotBleSerial" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Maker.Serial.NetworkSerial" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Maker.Serial.BluetoothSerial" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Maker.Serial.CurieBleSerial" ThreadingModel="both" />
       </InProcessServer>
     </Extension>
   </Extensions>

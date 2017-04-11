@@ -96,7 +96,6 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DHT.cs" />
     <Compile Include="Fridge.cs" />
     <Compile Include="Module.cs" />
     <Compile Include="StartupTask.cs" />
