@@ -1,0 +1,59 @@
+<fridge>
+
+	<water-level> 0 </water-level>
+	<nutrient-level> 0 </nutrient-level>
+	<error> none </error>
+	
+
+	<module type="1">
+		<plant> none </plant>
+		<water-on> 0 </water-on>
+		<water-off> 0 </water-off>
+		<light-on> 0 </light-on>
+		<light-off> 0 </light-off>
+		<days-left> 0 </days-left>
+		<error> none </error>
+	</module>
+	
+	<module type="2">
+		<plant> none </plant>
+		<water-on> 0 </water-on>
+		<water-off> 0 </water-off>
+		<light-on> 0 </light-on>
+		<light-off> 0 </light-off>
+		<days-left> 0 </days-left>
+		<error> none </error>
+	</module>
+	
+	<module type="3">
+		<plant> none </plant>
+		<water-on> 0 </water-on>
+		<water-off> 0 </water-off>
+		<light-on> 0 </light-on>
+		<light-off> 0 </light-off>
+		<days-left> 0 </days-left>
+		<error> none </error>
+	</module>
+	
+	<module type="4">
+		<plant> none </plant>
+		<water-on> 0 </water-on>
+		<water-off> 0 </water-off>
+		<light-on> 0 </light-on>
+		<light-off> 0 </light-off>
+		<days-left> 0 </days-left>
+		<error> none </error>
+	</module>
+	
+	<module type="5">
+		<plant> lettuce </plant>
+		<water-on> 0 </water-on>
+		<water-off> 0 </water-off>
+		<light-on> 0 </light-on>
+		<light-off> 0 </light-off>
+		<days-left> 0 </days-left>
+		<error> none </error>
+	</module>
+	
+</fridge>
+		

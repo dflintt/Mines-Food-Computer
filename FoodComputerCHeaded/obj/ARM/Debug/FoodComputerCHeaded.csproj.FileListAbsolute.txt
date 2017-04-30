@@ -8,7 +8,15 @@ C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputer
 C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputerCHeaded\bin\ARM\Debug\Core\AppxManifest.xml
 C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputerCHeaded\bin\ARM\Debug\Core\FoodComputerCHeaded.exe
 C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputerCHeaded\bin\ARM\Debug\FoodComputerCHeaded.build.appxrecipe
+C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputerCHeaded\bin\ARM\Debug\Adafruit.IoT.winmd
+C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputerCHeaded\bin\ARM\Debug\Adafruit.IoT.pdb
 C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputerCHeaded\bin\ARM\Debug\Microsoft.CSharp.dll
+C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputerCHeaded\bin\ARM\Debug\Microsoft.IoT.DeviceCore.winmd
+C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputerCHeaded\bin\ARM\Debug\Microsoft.IoT.DeviceCore.pdb
+C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputerCHeaded\bin\ARM\Debug\Microsoft.IoT.DeviceHelpers.dll
+C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputerCHeaded\bin\ARM\Debug\Microsoft.IoT.DeviceHelpers.pdb
+C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputerCHeaded\bin\ARM\Debug\Microsoft.IoT.Devices.winmd
+C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputerCHeaded\bin\ARM\Debug\Microsoft.IoT.Devices.pdb
 C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputerCHeaded\bin\ARM\Debug\System.ComponentModel.DataAnnotations.dll
 C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputerCHeaded\bin\ARM\Debug\System.Core.dll
 C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputerCHeaded\bin\ARM\Debug\System.Net.dll
@@ -195,4 +203,8 @@ C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputer
 C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputerCHeaded\obj\ARM\Debug\qualifiers.txt
 C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputerCHeaded\obj\ARM\Debug\qualifiers.txt.intermediate
 C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputerCHeaded\obj\ARM\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputerCHeaded\obj\ARM\Debug\Adafruit.IoT.pri.xml
+C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputerCHeaded\obj\ARM\Debug\Microsoft.IoT.DeviceCore.pri.xml
+C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputerCHeaded\obj\ARM\Debug\Microsoft.IoT.DeviceHelpers.pri.xml
+C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputerCHeaded\obj\ARM\Debug\Microsoft.IoT.Devices.pri.xml
 C:\Users\Duncan\Documents\Visual Studio 2015\Projects\FoodComputerC\FoodComputerCHeaded\obj\ARM\Debug\ProjectArchitectures.txt

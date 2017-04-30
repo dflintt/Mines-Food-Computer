@@ -8,14 +8,11 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="2,0,-2,0">
-        <TextBox x:ConnectionId='1' x:Name="testMoistureBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Margin="463,82,0,0"/>
-        <Ellipse x:ConnectionId='2' x:Name="ActuateIndicator" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="140" Margin="198,187,0,0" Stroke="Black" VerticalAlignment="Top" Width="140"/>
-        <Ellipse x:ConnectionId='3' x:Name="PollIndicator" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="140" Margin="431,187,0,0" Stroke="Black" VerticalAlignment="Top" Width="140"/>
-        <Ellipse x:ConnectionId='4' x:Name="SetIndicator" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="140" Margin="666,187,0,0" Stroke="Black" VerticalAlignment="Top" Width="140"/>
-        <TextBlock x:ConnectionId='5' x:Name="Actuate" HorizontalAlignment="Left" Margin="237,148,0,0" TextWrapping="Wrap" Text="Actuate" VerticalAlignment="Top"                                              />
-        <TextBlock x:ConnectionId='6' x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="493,148,0,0" TextWrapping="Wrap" Text="Poll" VerticalAlignment="Top"/>
-        <TextBlock x:ConnectionId='7' x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="728,148,0,0" TextWrapping="Wrap" Text="Set" VerticalAlignment="Top"/>
-        <Button x:ConnectionId='8' x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="319,400,0,0" VerticalAlignment="Top"/>
+        <Ellipse x:ConnectionId='1' x:Name="ActuateIndicator" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="140" Margin="198,187,0,0" Stroke="Black" VerticalAlignment="Top" Width="140"/>
+        <Ellipse x:ConnectionId='2' x:Name="PollIndicator" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="140" Margin="431,187,0,0" Stroke="Black" VerticalAlignment="Top" Width="140"/>
+        <Ellipse x:ConnectionId='3' x:Name="SetIndicator" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="140" Margin="666,187,0,0" Stroke="Black" VerticalAlignment="Top" Width="140"/>
+
+        <Button x:ConnectionId='4' x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="319,400,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>

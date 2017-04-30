@@ -39,13 +39,49 @@
   <Extensions>
     <Extension Category="windows.activatableClass.inProcessServer">
       <InProcessServer>
+        <Path>CLRHost.dll</Path>
+        <ActivatableClass ActivatableClassId="Adafruit.IoT.Devices.MotorHat2348" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.IoT.DeviceCore.EmptyEventArgs" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.IoT.DeviceCore.Display.GraphicsTools" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.IoT.DeviceCore.Pwm.PwmProviderManager" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.IoT.DeviceCore.Microsoft_IoT_DeviceCore_XamlTypeInfo.XamlMetaDataProvider" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.IoT.DeviceCore.Scheduler" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.IoT.DeviceCore.Input.RotaryEncoderRotatedEventArgs" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.IoT.DeviceCore.Input.ThumbstickReadingChangedEventArgs" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.IoT.DeviceCore.Input.ThumbstickReading" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.IoT.DeviceCore.Controls.GraphicsDisplayPanel" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.IoT.DeviceCore.ScheduledUpdater" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.IoT.DeviceCore.ScheduleOptions" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.IoT.DeviceCore.DispatcherExtensions" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.IoT.DeviceCore.GpioExtensions" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.IoT.DeviceCore.Sensors.AnalogSensorReading" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.IoT.DeviceCore.Sensors.AnalogSensorReadingChangedEventArgs" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.IoT.DeviceCore.Adc.AdcProviderManager" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.IoT.Devices.Sensors.AnalogSensor" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.IoT.Devices.Lights.RgbLed" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.IoT.Devices.Pwm.PCA9685" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.IoT.Devices.Pwm.SoftPwm" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.IoT.Devices.Display.ADA938" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.IoT.Devices.Display.ST7735" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.IoT.Devices.Display.SSD1306" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.IoT.Devices.Input.PushButton" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.IoT.Devices.Input.RotaryEncoder" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.IoT.Devices.Input.SS944" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.IoT.Devices.Input.Switch" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.IoT.Devices.Adc.ADC0832" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.IoT.Devices.Adc.MCP3008" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.IoT.Devices.Adc.MCP3208" ThreadingModel="both" />
+      </InProcessServer>
+    </Extension>
+    <Extension Category="windows.activatableClass.inProcessServer">
+      <InProcessServer>
         <Path>Microsoft.Maker.Firmata.dll</Path>
-        <ActivatableClass ActivatableClassId="Microsoft.Maker.Firmata.StringCallbackEventArgs" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Microsoft.Maker.Firmata.UwpFirmata" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.Maker.Firmata.CallbackEventArgs" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Microsoft.Maker.Firmata.SystemResetCallbackEventArgs" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Microsoft.Maker.Firmata.SysexCallbackEventArgs" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Maker.Firmata.StringCallbackEventArgs" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.Maker.Firmata.I2cCallbackEventArgs" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Maker.Firmata.UwpFirmata" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Maker.Firmata.SysexCallbackEventArgs" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Maker.Firmata.SystemResetCallbackEventArgs" ThreadingModel="both" />
       </InProcessServer>
     </Extension>
     <Extension Category="windows.activatableClass.inProcessServer">
@@ -58,12 +94,12 @@
     <Extension Category="windows.activatableClass.inProcessServer">
       <InProcessServer>
         <Path>Microsoft.Maker.Serial.dll</Path>
-        <ActivatableClass ActivatableClassId="Microsoft.Maker.Serial.UsbSerial" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Microsoft.Maker.Serial.BleSerial" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Microsoft.Maker.Serial.DfRobotBleSerial" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Microsoft.Maker.Serial.NetworkSerial" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Microsoft.Maker.Serial.BluetoothSerial" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.Maker.Serial.CurieBleSerial" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Maker.Serial.DfRobotBleSerial" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Maker.Serial.UsbSerial" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Maker.Serial.BluetoothSerial" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Maker.Serial.NetworkSerial" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Maker.Serial.BleSerial" ThreadingModel="both" />
       </InProcessServer>
     </Extension>
   </Extensions>
@@ -77,7 +113,7 @@
     <build:Item Name="OptimizingToolset" Value="None" />
     <build:Item Name="TargetRuntime" Value="Managed" />
     <build:Item Name="Microsoft.Windows.UI.Xaml.Build.Tasks.dll" Version="14.0.25527.1" />
-    <build:Item Name="WindowsIoT" Version="10.0.14393.0" />
+    <build:Item Name="WindowsIoT" Version="10.0.10240.0" />
     <build:Item Name="MakePri.exe" Version="10.0.14393.33 (rs1_release_sec.160727-1952)" />
   </build:Metadata>
 </Package>

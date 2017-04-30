@@ -96,6 +96,7 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArduinoI2CDevice.cs" />
     <Compile Include="Fridge.cs" />
     <Compile Include="Module.cs" />
     <Compile Include="StartupTask.cs" />

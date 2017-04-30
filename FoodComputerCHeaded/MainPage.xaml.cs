@@ -19,6 +19,7 @@ using System.Net.Http;
 using Windows.ApplicationModel.Background;
 using Windows.System.Threading;
 using Windows.Devices.Gpio;
+using Windows.Devices.I2c;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -30,8 +31,8 @@ namespace FoodComputerCHeaded
     public sealed partial class MainPage : Page
     {
         private DispatcherTimer timer;
-        private const int ACTUATE_PIN = 9;
-        private const int POLL_PIN = 10;
+        private const int ACTUATE_PIN = 13;
+        private const int POLL_PIN = 12;
         private const int SET_PIN = 11;
 
         private GpioPin actuatePin;
@@ -51,10 +52,18 @@ namespace FoodComputerCHeaded
         //private ThreadPoolTimer timer;
         private string state = "actuate";
 
+
         private IStream connection;
         private RemoteDevice arduino;
 
         private Module testModule;
+
+
+        
+
+       
+
+        //private I2c
 
         public MainPage()
         {
@@ -67,6 +76,8 @@ namespace FoodComputerCHeaded
             timer.Tick += Timer_Tick;
 
             timer.Start();
+
+            //I2cDevice.
         }
 
         private void Timer_Tick(object sender, object e)
@@ -75,11 +86,9 @@ namespace FoodComputerCHeaded
             {
                 case "actuate":
 
-
-
-                    //arduino.digitalWrite(ACTUATE_PIN, PinState.HIGH);
-                    //arduino.digitalWrite(POLL_PIN, PinState.LOW);
-                    //arduino.digitalWrite(SET_PIN, PinState.LOW);
+                    arduino.digitalWrite(ACTUATE_PIN, PinState.HIGH);
+                    arduino.digitalWrite(POLL_PIN, PinState.LOW);
+                    arduino.digitalWrite(SET_PIN, PinState.LOW);
 
                     ActuateIndicator.Fill = redBrush;
                     PollIndicator.Fill = grayBrush;
@@ -94,13 +103,18 @@ namespace FoodComputerCHeaded
                     myMoisture = testModule.readMoisture();
                     
 
-                    //arduino.digitalWrite(ACTUATE_PIN, PinState.LOW);
-                    //arduino.digitalWrite(POLL_PIN, PinState.HIGH);
-                    //arduino.digitalWrite(SET_PIN, PinState.LOW);
+                    arduino.digitalWrite(ACTUATE_PIN, PinState.LOW);
+                    arduino.digitalWrite(POLL_PIN, PinState.HIGH);
+                    arduino.digitalWrite(SET_PIN, PinState.LOW);
 
                     ActuateIndicator.Fill = grayBrush;
                     PollIndicator.Fill = redBrush;
                     SetIndicator.Fill = grayBrush;
+
+
+                    //arduino.I2c.r
+
+                    //arduino.I2c.
 
                     state = "set";
 
@@ -109,14 +123,14 @@ namespace FoodComputerCHeaded
                 case "set":
 
                     //testMoistureBox.Text = myMoisture.ToString();
-                    testMoistureBox.Text = arduino.analogRead("A4").ToString();
+                    //testMoistureBox.Text = arduino.analogRead("A4").ToString();
                     //testMoistureBox.Text = 101.ToString();
 
                     ushort temp = arduino.analogRead("A4");
 
-                    //arduino.digitalWrite(ACTUATE_PIN, PinState.LOW);
-                    //arduino.digitalWrite(POLL_PIN, PinState.LOW);
-                    //arduino.digitalWrite(SET_PIN, PinState.HIGH);
+                    arduino.digitalWrite(ACTUATE_PIN, PinState.LOW);
+                    arduino.digitalWrite(POLL_PIN, PinState.LOW);
+                    arduino.digitalWrite(SET_PIN, PinState.HIGH);
 
                     arduino.analogWrite(SET_PIN, 700);
                     arduino.analogWrite(POLL_PIN, 700);
@@ -148,6 +162,8 @@ namespace FoodComputerCHeaded
             }
     }
 
+
+
             // This is used for the raspberry pi pin I/O
             private void InitGPIO()
             {
@@ -158,19 +174,26 @@ namespace FoodComputerCHeaded
             setPin = gpio.OpenPin(SET_PIN);
             */
 
+            
+
 
 
             //connection = new UsbSerial("VID_2341", "PID_0043"); For initial arduino
             connection = new UsbSerial("VID_2A03", "PID_0043");
             arduino = new RemoteDevice(connection);
 
-                testModule = new Module(arduino, 0, "0", 5);
+            testModule = new Module(arduino, 0, "0", 5);
 
                 //Setup();
 
-                arduino.DeviceReady += Setup;
+            arduino.DeviceReady += Setup;
 
-                connection.begin(57600, SerialConfig.SERIAL_8N1);
+
+            
+
+            connection.begin(9600, SerialConfig.SERIAL_8N1);
+            
+                
 
                 //actuatePin.SetDriveMode(GpioPinDriveMode.Output);
                 //pollPin.SetDriveMode(GpioPinDriveMode.Output);
@@ -196,14 +219,11 @@ namespace FoodComputerCHeaded
                 arduino.pinMode(POLL_PIN, PinMode.OUTPUT);
                 arduino.pinMode(SET_PIN, PinMode.OUTPUT);
 
-                arduino.pinMode("A4", PinMode.ANALOG);
+               // arduino.pinMode("A4", PinMode.ANALOG);
+                //arduino.pinMode(4, PinMode.ONEWIRE);
                 //arduino.pinMode(SET_PIN, PinMode.ONEWIRE);
             }
 
-        private void textBlock_SelectionChanged(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
     }
     

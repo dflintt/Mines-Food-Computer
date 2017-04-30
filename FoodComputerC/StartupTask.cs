@@ -53,6 +53,10 @@ namespace FoodComputerC
 
         private Module testModule;
 
+        private ArduinoI2CDevice pwm;
+
+
+
         public void Run(IBackgroundTaskInstance taskInstance)
         {
             _deferral = taskInstance.GetDeferral();
@@ -60,20 +64,45 @@ namespace FoodComputerC
             InitGPIO();
 
             timer = ThreadPoolTimer.CreatePeriodicTimer(Timer_Tick,
-                       TimeSpan.FromMilliseconds(1000));
+                       TimeSpan.FromMilliseconds(5000));
         }
 
         public void Timer_Tick(ThreadPoolTimer timer)
         {
+            arduino.digitalWrite(5, PinState.HIGH);
+            /*
+            pwm.setPWM(0, 0, 0);
+            pwm.setPWM(1, 0, 0);
+            pwm.setPWM(2, 0, 0);
+            pwm.setPWM(3, 0, 0);
+            pwm.setPWM(4, 0, 0);
+
+            for (UInt32 i = 0; i < 5; i++)
+            {
+                for (UInt32 j = 0; j < 2500; j++)
+                {
+                    pwm.setPWM((byte) i, 0, (UInt16) j);
+                    pwm.setPWM(0, 0, 0);
+                }
+                pwm.setPWM(0, 0, 0);
+                pwm.setPWM(1, 0, 0);
+                pwm.setPWM(2, 0, 0);
+                pwm.setPWM(3, 0, 0);
+                pwm.setPWM(4, 0, 0);
+            }
+            */
+            arduino.digitalWrite(5, PinState.LOW);
+
+            /*
             switch (state)
             {
                 case "actuate":
                     
-                    /*
-                    actuatePin.Write(GpioPinValue.High);
-                    pollPin.Write(GpioPinValue.Low);
-                    setPin.Write(GpioPinValue.Low);
-                    */
+                    
+                    //actuatePin.Write(GpioPinValue.High);
+                    //pollPin.Write(GpioPinValue.Low);
+                    //setPin.Write(GpioPinValue.Low);
+                    
                     
                     
                     arduino.digitalWrite(ACTUATE_PIN, PinState.HIGH);
@@ -86,11 +115,11 @@ namespace FoodComputerC
 
                 case "poll":
 
-                    /*
-                    actuatePin.Write(GpioPinValue.Low);
-                    pollPin.Write(GpioPinValue.High);
-                    setPin.Write(GpioPinValue.Low);
-                    */
+                    
+                    //actuatePin.Write(GpioPinValue.Low);
+                    //pollPin.Write(GpioPinValue.High);
+                   // setPin.Write(GpioPinValue.Low);
+                    
 
                     myMoisture = testModule.readMoisture();
                     arduino.digitalWrite(ACTUATE_PIN, PinState.LOW);
@@ -103,11 +132,11 @@ namespace FoodComputerC
 
                 case "set":
                     
-                    /*
-                    actuatePin.Write(GpioPinValue.Low);
-                    pollPin.Write(GpioPinValue.Low);
-                    setPin.Write(GpioPinValue.High);
-                    */
+                    
+                   // actuatePin.Write(GpioPinValue.Low);
+                    //pollPin.Write(GpioPinValue.Low);
+                    //setPin.Write(GpioPinValue.High);
+                    
                     
                     arduino.digitalWrite(ACTUATE_PIN, PinState.LOW);
                     arduino.digitalWrite(POLL_PIN, PinState.LOW);
@@ -117,6 +146,7 @@ namespace FoodComputerC
 
                     break;
             }
+                */
         }
 
         // This is used for the raspberry pi pin I/O
@@ -142,10 +172,23 @@ namespace FoodComputerC
 
             connection.begin(57600, SerialConfig.SERIAL_8N1);
 
-            //actuatePin.SetDriveMode(GpioPinDriveMode.Output);
-            //pollPin.SetDriveMode(GpioPinDriveMode.Output);
-            //setPin.SetDriveMode(GpioPinDriveMode.Output);
-        }
+            // begin i2c test stuff
+
+            //UNCOMMENT BEFORE SETTING
+            //pwm.begin();
+            //pwm.setPWMFreq(1000);  // temp hardcoded to 1000
+
+            // save I2C bitrate
+            //uint8_t twbrbackup = TWBR;
+            // must be changed after calling Wire.begin() (inside pwm.begin())
+            //TWBR = 12; // upgrade to 400KHz!
+
+
+
+                //actuatePin.SetDriveMode(GpioPinDriveMode.Output);
+                //pollPin.SetDriveMode(GpioPinDriveMode.Output);
+                //setPin.SetDriveMode(GpioPinDriveMode.Output);
+            }
 
 
         public void SetupRemoteArduino()

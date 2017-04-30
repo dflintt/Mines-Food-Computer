@@ -3,6 +3,18 @@
   "version": 2,
   "targets": {
     "UAP,Version=v10.0": {
+      "Adafruit.IoT/1.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IoT.Devices": "1.0.6"
+        },
+        "compile": {
+          "lib/uap10.0/Adafruit.IoT.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Adafruit.IoT.winmd": {}
+        }
+      },
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -28,6 +40,37 @@
         },
         "runtime": {
           "lib/netcore50/Microsoft.CSharp.dll": {}
+        }
+      },
+      "Microsoft.IoT.DeviceCore/1.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Microsoft.IoT.DeviceCore.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.IoT.DeviceCore.winmd": {}
+        }
+      },
+      "Microsoft.IoT.DeviceHelpers/1.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Microsoft.IoT.DeviceHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.IoT.DeviceHelpers.dll": {}
+        }
+      },
+      "Microsoft.IoT.Devices/1.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IoT.DeviceCore": "1.0.3",
+          "Microsoft.IoT.DeviceHelpers": "1.0.4"
+        },
+        "compile": {
+          "lib/uap10.0/Microsoft.IoT.Devices.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.IoT.Devices.winmd": {}
         }
       },
       "Microsoft.NETCore/5.0.0": {
@@ -1931,6 +1974,18 @@
       }
     },
     "UAP,Version=v10.0/win10-arm": {
+      "Adafruit.IoT/1.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IoT.Devices": "1.0.6"
+        },
+        "compile": {
+          "lib/uap10.0/Adafruit.IoT.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Adafruit.IoT.winmd": {}
+        }
+      },
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -1956,6 +2011,37 @@
         },
         "runtime": {
           "lib/netcore50/Microsoft.CSharp.dll": {}
+        }
+      },
+      "Microsoft.IoT.DeviceCore/1.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Microsoft.IoT.DeviceCore.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.IoT.DeviceCore.winmd": {}
+        }
+      },
+      "Microsoft.IoT.DeviceHelpers/1.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Microsoft.IoT.DeviceHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.IoT.DeviceHelpers.dll": {}
+        }
+      },
+      "Microsoft.IoT.Devices/1.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IoT.DeviceCore": "1.0.3",
+          "Microsoft.IoT.DeviceHelpers": "1.0.4"
+        },
+        "compile": {
+          "lib/uap10.0/Microsoft.IoT.Devices.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.IoT.Devices.winmd": {}
         }
       },
       "Microsoft.NETCore/5.0.0": {
@@ -3692,6 +3778,18 @@
       }
     },
     "UAP,Version=v10.0/win10-arm-aot": {
+      "Adafruit.IoT/1.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IoT.Devices": "1.0.6"
+        },
+        "compile": {
+          "lib/uap10.0/Adafruit.IoT.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Adafruit.IoT.winmd": {}
+        }
+      },
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -3717,6 +3815,37 @@
         },
         "runtime": {
           "lib/netcore50/Microsoft.CSharp.dll": {}
+        }
+      },
+      "Microsoft.IoT.DeviceCore/1.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Microsoft.IoT.DeviceCore.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.IoT.DeviceCore.winmd": {}
+        }
+      },
+      "Microsoft.IoT.DeviceHelpers/1.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Microsoft.IoT.DeviceHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.IoT.DeviceHelpers.dll": {}
+        }
+      },
+      "Microsoft.IoT.Devices/1.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IoT.DeviceCore": "1.0.3",
+          "Microsoft.IoT.DeviceHelpers": "1.0.4"
+        },
+        "compile": {
+          "lib/uap10.0/Microsoft.IoT.Devices.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.IoT.Devices.winmd": {}
         }
       },
       "Microsoft.NETCore/5.0.0": {
@@ -5410,6 +5539,18 @@
       }
     },
     "UAP,Version=v10.0/win10-x64": {
+      "Adafruit.IoT/1.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IoT.Devices": "1.0.6"
+        },
+        "compile": {
+          "lib/uap10.0/Adafruit.IoT.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Adafruit.IoT.winmd": {}
+        }
+      },
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -5435,6 +5576,37 @@
         },
         "runtime": {
           "lib/netcore50/Microsoft.CSharp.dll": {}
+        }
+      },
+      "Microsoft.IoT.DeviceCore/1.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Microsoft.IoT.DeviceCore.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.IoT.DeviceCore.winmd": {}
+        }
+      },
+      "Microsoft.IoT.DeviceHelpers/1.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Microsoft.IoT.DeviceHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.IoT.DeviceHelpers.dll": {}
+        }
+      },
+      "Microsoft.IoT.Devices/1.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IoT.DeviceCore": "1.0.3",
+          "Microsoft.IoT.DeviceHelpers": "1.0.4"
+        },
+        "compile": {
+          "lib/uap10.0/Microsoft.IoT.Devices.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.IoT.Devices.winmd": {}
         }
       },
       "Microsoft.NETCore/5.0.0": {
@@ -7180,6 +7352,18 @@
       }
     },
     "UAP,Version=v10.0/win10-x64-aot": {
+      "Adafruit.IoT/1.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IoT.Devices": "1.0.6"
+        },
+        "compile": {
+          "lib/uap10.0/Adafruit.IoT.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Adafruit.IoT.winmd": {}
+        }
+      },
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -7205,6 +7389,37 @@
         },
         "runtime": {
           "lib/netcore50/Microsoft.CSharp.dll": {}
+        }
+      },
+      "Microsoft.IoT.DeviceCore/1.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Microsoft.IoT.DeviceCore.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.IoT.DeviceCore.winmd": {}
+        }
+      },
+      "Microsoft.IoT.DeviceHelpers/1.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Microsoft.IoT.DeviceHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.IoT.DeviceHelpers.dll": {}
+        }
+      },
+      "Microsoft.IoT.Devices/1.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IoT.DeviceCore": "1.0.3",
+          "Microsoft.IoT.DeviceHelpers": "1.0.4"
+        },
+        "compile": {
+          "lib/uap10.0/Microsoft.IoT.Devices.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.IoT.Devices.winmd": {}
         }
       },
       "Microsoft.NETCore/5.0.0": {
@@ -8898,6 +9113,18 @@
       }
     },
     "UAP,Version=v10.0/win10-x86": {
+      "Adafruit.IoT/1.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IoT.Devices": "1.0.6"
+        },
+        "compile": {
+          "lib/uap10.0/Adafruit.IoT.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Adafruit.IoT.winmd": {}
+        }
+      },
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -8923,6 +9150,37 @@
         },
         "runtime": {
           "lib/netcore50/Microsoft.CSharp.dll": {}
+        }
+      },
+      "Microsoft.IoT.DeviceCore/1.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Microsoft.IoT.DeviceCore.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.IoT.DeviceCore.winmd": {}
+        }
+      },
+      "Microsoft.IoT.DeviceHelpers/1.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Microsoft.IoT.DeviceHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.IoT.DeviceHelpers.dll": {}
+        }
+      },
+      "Microsoft.IoT.Devices/1.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IoT.DeviceCore": "1.0.3",
+          "Microsoft.IoT.DeviceHelpers": "1.0.4"
+        },
+        "compile": {
+          "lib/uap10.0/Microsoft.IoT.Devices.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.IoT.Devices.winmd": {}
         }
       },
       "Microsoft.NETCore/5.0.0": {
@@ -10668,6 +10926,18 @@
       }
     },
     "UAP,Version=v10.0/win10-x86-aot": {
+      "Adafruit.IoT/1.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IoT.Devices": "1.0.6"
+        },
+        "compile": {
+          "lib/uap10.0/Adafruit.IoT.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Adafruit.IoT.winmd": {}
+        }
+      },
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -10693,6 +10963,37 @@
         },
         "runtime": {
           "lib/netcore50/Microsoft.CSharp.dll": {}
+        }
+      },
+      "Microsoft.IoT.DeviceCore/1.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Microsoft.IoT.DeviceCore.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.IoT.DeviceCore.winmd": {}
+        }
+      },
+      "Microsoft.IoT.DeviceHelpers/1.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Microsoft.IoT.DeviceHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.IoT.DeviceHelpers.dll": {}
+        }
+      },
+      "Microsoft.IoT.Devices/1.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IoT.DeviceCore": "1.0.3",
+          "Microsoft.IoT.DeviceHelpers": "1.0.4"
+        },
+        "compile": {
+          "lib/uap10.0/Microsoft.IoT.Devices.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.IoT.Devices.winmd": {}
         }
       },
       "Microsoft.NETCore/5.0.0": {
@@ -12387,6 +12688,18 @@
     }
   },
   "libraries": {
+    "Adafruit.IoT/1.0.6": {
+      "sha512": "v45f4equYST5glZ/mvKnrzqF1k+f30QPOdg+8CRyIilkIpcTobfSvBMzFoEvzDH+srjtim8c+8nwCyU8dPKTRA==",
+      "type": "package",
+      "path": "Adafruit.IoT/1.0.6",
+      "files": [
+        "Adafruit.IoT.1.0.6.nupkg.sha512",
+        "Adafruit.IoT.nuspec",
+        "lib/uap10.0/Adafruit.IoT.pdb",
+        "lib/uap10.0/Adafruit.IoT.pri",
+        "lib/uap10.0/Adafruit.IoT.winmd"
+      ]
+    },
     "Microsoft.CSharp/4.0.0": {
       "sha512": "oWqeKUxHXdK6dL2CFjgMcaBISbkk+AqEg+yvJHE4DElNzS4QaTsCflgkkqZwVlWby1Dg9zo9n+iCAMFefFdJ/A==",
       "type": "package",
@@ -12425,6 +12738,48 @@
         "ref/wpa81/_._",
         "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._"
+      ]
+    },
+    "Microsoft.IoT.DeviceCore/1.0.3": {
+      "sha512": "CVa2TcS6B4n4qVi4mtqAmgqYj2NRugJqhHKo1YzayGw5VgpqWLRJOm0HDUFROGTX3pcsSPE9jAQGoU2ugumzVw==",
+      "type": "package",
+      "path": "Microsoft.IoT.DeviceCore/1.0.3",
+      "files": [
+        "Microsoft.IoT.DeviceCore.1.0.3.nupkg.sha512",
+        "Microsoft.IoT.DeviceCore.nuspec",
+        "build/Microsoft.IoT.DeviceCore.targets",
+        "lib/uap10.0/Microsoft.IoT.DeviceCore.pdb",
+        "lib/uap10.0/Microsoft.IoT.DeviceCore.pri",
+        "lib/uap10.0/Microsoft.IoT.DeviceCore.winmd",
+        "lib/uap10.0/Microsoft.IoT.DeviceCore/Microsoft.IoT.DeviceCore.xr.xml",
+        "lib/uap10.0/Microsoft.IoT.DeviceCore/Themes/Generic.xaml"
+      ]
+    },
+    "Microsoft.IoT.DeviceHelpers/1.0.4": {
+      "sha512": "SqYkxwOFvupxGJx7srYuVaqQtuxpKBKjcDQFP9435B3O0jBRTiVo66qJCxrN5v5XEJM3snsKRlAkqRFD28fAkw==",
+      "type": "package",
+      "path": "Microsoft.IoT.DeviceHelpers/1.0.4",
+      "files": [
+        "Microsoft.IoT.DeviceHelpers.1.0.4.nupkg.sha512",
+        "Microsoft.IoT.DeviceHelpers.nuspec",
+        "lib/uap10.0/Microsoft.IoT.DeviceHelpers.XML",
+        "lib/uap10.0/Microsoft.IoT.DeviceHelpers.dll",
+        "lib/uap10.0/Microsoft.IoT.DeviceHelpers.pdb",
+        "lib/uap10.0/Microsoft.IoT.DeviceHelpers.pri",
+        "lib/uap10.0/Microsoft.IoT.DeviceHelpers/Properties/Microsoft.IoT.DeviceHelpers.rd.xml"
+      ]
+    },
+    "Microsoft.IoT.Devices/1.0.6": {
+      "sha512": "BpID52RDpoJYj9YOIbFr6yPyKz398RGMsiYs4hwaSKK+KafBj/13NyXBPOupz2OFjZAqxznXXZahunNMUWuVcw==",
+      "type": "package",
+      "path": "Microsoft.IoT.Devices/1.0.6",
+      "files": [
+        "Microsoft.IoT.Devices.1.0.6.nupkg.sha512",
+        "Microsoft.IoT.Devices.nuspec",
+        "lib/uap10.0/Microsoft.IoT.Devices.XML",
+        "lib/uap10.0/Microsoft.IoT.Devices.pdb",
+        "lib/uap10.0/Microsoft.IoT.Devices.pri",
+        "lib/uap10.0/Microsoft.IoT.Devices.winmd"
       ]
     },
     "Microsoft.NETCore/5.0.0": {
@@ -15786,6 +16141,7 @@
   },
   "projectFileDependencyGroups": {
     "": [
+      "Adafruit.IoT >= 1.0.6",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.1.0",
       "Windows-Remote-Arduino >= 1.4.0"
     ],
